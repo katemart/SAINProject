@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.1.1">
+  <zoom_level>9</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>54</x>
+      <y>135</y>
+      <w>288</w>
+      <h>783</h>
+    </coordinates>
+    <panel_attributes>Student
+--
+-program:Program
+-degree:String
+-major:String
+-cumulativeGpa:double
+-programGpa:double
+-majorGpa:double
+-campus:String
+-advisor:Advisor
+-creditsTakenAtSccc:int
+-transferCredits:int
+-totalCreditsToDegree:int
+-totalCreditsTaken:int
+-coursesTakenRequired:ArrayList&lt;Course&gt;
+-coursesToTake:ArrayList&lt;Course&gt;
+-coursesInProgress:ArrayList&lt;Course&gt;
+-coursesWithdrawnFailed:ArrayList&lt;Course&gt;
+-coursesTakenOther:ArrayList&lt;Course&gt;
+--
++Student(String, String)
++setProgram(program:Program):void
++getProgram():Program
++setDegree(degree:String):void
++getDegree():String
++setMajor(major:String):void
++getMajor():String
++setCumulativeGpa(gpa:double):void
++getCumulativeGpa():double
++setProgramGpa(programGpa:double):void
++getProgramGpa():double
++setMajorGpa(majorGpa:double):void
++getMajorGpa():double
++setCampus(campus:String):void
++getCampus():String
++setAdvisor(advisor:String):void
++getAdvisor():String
++setCreditsTakenAtSccc(credits:int):void
++getCreditsTakenAtSccc():int
++setTransferCredits(credits:int):void
++getTransferCredits():int
++setTotalCreditsToDegree(credits:int):void
++getTotalCreditsToDegree():int
++setCreditsTaken(credits:int):void
++getCreditsTaken():int
++setCoursesTakenRequired(course:Course):void
++getCoursesTakenRequired():ArrayList&lt;Course&gt;
++setCoursesToTake(course:Course):void
++getCoursesToTake():ArrayList&lt;Course&gt;
++setCoursesInProgress(course:Course):void
++getCoursesInProgress():ArrayList&lt;Course&gt;
++setCoursesWithdrawnFailed(course:Course):void
++getCoursesWithdrawnFailed():ArrayList&lt;Course&gt;
++setCoursesTakenOther(course:Course):void.
++getCoursesTakenOther():ArrayList&lt;Course&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>432</x>
+      <y>0</y>
+      <w>171</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>Person
+--
+-name:String
+-id:String{unique}
+--
++setName(name:String):void
++getName():String
++setId(id:String):void
++getId():String
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>747</x>
+      <y>90</y>
+      <w>234</w>
+      <h>162</h>
+    </coordinates>
+    <panel_attributes>Faculty
+--
+-title:String
+-department:String
+-salary:double
+--
++setTitle(title:String):void
++getTitle():String
++setDepartment(department:String):void
++getDepartment():String
++setSalary(salary:double):void
++getSalary():double</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>747</x>
+      <y>315</y>
+      <w>315</w>
+      <h>549</h>
+    </coordinates>
+    <panel_attributes>Course
+--
+-title:String
+-courseNumber:String
+-subject:String
+-courseAttributes:String
+-otherRequirements:String
+-credits:int
+-grade:char
+-term:String
+-countInProgram:boolean
+-nysFinAidElig:boolean
+-fedAidElig:boolean
+-repeat:boolean
+--
++setTitle(title:String):void
++getTitle():String
++setCourseNumber(courseNum:int):void
++getCourseNumber():int
++setSubject(subject:String):void
++getSubject():String
++setCourseAttributes(courseAtr:ArrayList&lt;String&gt;):void
++getCourseAttributes():ArrayList&lt;String&gt;
++setOtherRequirements(otherReq:String):void
++getOtherRequirements():String
++setCredits(credits:int):void
++getCredits():Int
++setGrade(grade:String):void
++getGrade():String
++setTerm(term:String):void
++getTerm():String
++setCountInProgram(countInProg:boolean):void
++getCountInProgram():boolean
++setNysFinElig(finElig:boolean):void
++getNysFinAidElig():boolean
++setFedAidElig(fedAidElig:boolean):void
++getFedAidElig():boolean
++setRepeat(repeat:boolean):void
++getRepeat():boolean</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>189</x>
+      <y>45</y>
+      <w>261</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>270.0;10.0;10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>594</x>
+      <y>45</y>
+      <w>243</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;250.0;10.0;250.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>414</x>
+      <y>459</y>
+      <w>315</w>
+      <h>315</h>
+    </coordinates>
+    <panel_attributes>Program
+--
+-title:String
+-dateEntered:String
+-minGpa:double
+-totalCreditsRequired:double
+-minNumOfCreditsAtSccc:double
+-coursesNeeded:ArrayList&lt;Course&gt;
+--
++Program(String, double, double)
++setTitle(title:String):void
++getTitle():String
++setDateEntered(date:String):void
++getDateEntered():String
++setMinGpa(minGpa:double):void
++getMinGpa():double
++setTotalCreditsRequired(creds:double):void
++getTotalCreditsRequired():double
++setMinNumOfCreditsAtSccc(creds:double):void
++getMinNumOfCreditsAtSccc():double
++setCoursesNeeded(courses:ArrayList&lt;Course&gt;):void
++getCoursesNeeded():ArrayList&lt;Course&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>405</x>
+      <y>171</y>
+      <w>270</w>
+      <h>198</h>
+    </coordinates>
+    <panel_attributes>Administrator
+--
+-password:String
+--
++Administrator(String, String)
++setPassword(password:String):void
++getPassword():String
++setStudentInfo(info:ArrayList&lt;String&gt;):void
++getStudentInfo():ArrayList&lt;String&gt;
++setFacultyInfo(info:ArrayList&lt;String&gt;):void
++getFacutyInfo():ArrayList&lt;String&gt;
++setCourseInfo(info:ArrayList&lt;String&gt;:void
++getCourseInfo():ArrayList&lt;String&gt;
++setProgramInfo(info:ArrayList&lt;String&gt;):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>522</x>
+      <y>126</y>
+      <w>27</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>333</x>
+      <y>243</y>
+      <w>90</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1..*
+m2=1
+manages</panel_attributes>
+    <additional_attributes>10.0;20.0;80.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>666</x>
+      <y>162</y>
+      <w>99</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1..*
+manages</panel_attributes>
+    <additional_attributes>10.0;20.0;90.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>333</x>
+      <y>531</y>
+      <w>99</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=1..*</panel_attributes>
+    <additional_attributes>90.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>666</x>
+      <y>333</y>
+      <w>99</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1..*
+manages</panel_attributes>
+    <additional_attributes>10.0;20.0;90.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>513</x>
+      <y>360</y>
+      <w>72</w>
+      <h>117</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1..*
+manages</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>333</x>
+      <y>810</y>
+      <w>432</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1..*
+m2=1..*</panel_attributes>
+    <additional_attributes>460.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>
